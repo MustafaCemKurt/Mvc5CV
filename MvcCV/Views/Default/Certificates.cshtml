@@ -1,0 +1,57 @@
+﻿@using MvcCV.Models.Entity
+@model List<TblCertificiates>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Awards & Certifications</h2>
+    <ul class="fa-ul mb-0">
+        @foreach (var item in Model)
+        {
+            <li class="certification-item">
+                <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                <div class="certification-details">
+                    <h4 class="certification-title">@item.comment</h4>
+                    <p class="certification-creator">@item.organizator</p>
+                    <p class="certification-date">@item.date</p>
+                </div>
+            </li>
+        }
+    </ul>
+</div>
+
+<style>
+    .resume-section-content {
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+    }
+
+    .fa-ul {
+        list-style: none;
+        padding-left: 2em;
+    }
+
+    .certification-item {
+        margin-bottom: 15px;
+    }
+
+    .certification-details {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .certification-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #343a40;
+    }
+
+    .certification-creator {
+        font-size: 1rem;
+        color: #6c757d;
+    }
+
+    .certification-date {
+        font-size: 0.875rem;
+        color: #6c757d;
+    }
+</style>

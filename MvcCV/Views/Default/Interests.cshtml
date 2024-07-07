@@ -1,0 +1,36 @@
+﻿@using MvcCV.Models.Entity
+@model List<TblInterests>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Interests</h2>
+    @foreach (var item in Model)
+    {
+        <div class="interest-item">
+            <h3 class="interest-title">@item.comment1</h3>
+            <p class="interest-description mb-0">@item.comment2</p>
+        </div>
+    }
+</div>
+
+<style>
+    .resume-section-content {
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+    }
+
+    .interest-item {
+        margin-bottom: 20px;
+    }
+
+    .interest-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #343a40;
+    }
+
+    .interest-description {
+        font-size: 1rem;
+        color: #6c757d;
+    }
+</style>
