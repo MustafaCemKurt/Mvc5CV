@@ -1,0 +1,60 @@
+﻿@model MvcCV.Models.Entity.TblExperience
+
+@{
+    ViewBag.Title = "GetExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    body {
+        background-color: #343a40; /* Daha koyu gri arka plan rengi */
+    }
+
+    .container {
+        background-color: #ffffff; /* Beyaz arka plan rengi */
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-label {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .btn-update {
+        font-size: 1.2em;
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2 class="text-center">Update Experience Page</h2>
+
+    <form method="post" class="mt-4">
+        <div class="form-group">
+            @Html.Label("Experience ID:", new { @class = "form-label" })
+            @Html.TextBoxFor(x => x.id, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.Label("Company:", new { @class = "form-label" })
+            @Html.TextBoxFor(x => x.baslik, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.Label("Job Title:", new { @class = "form-label" })
+            @Html.TextBoxFor(x => x.altbaslik, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.Label("Work Date:", new { @class = "form-label" })
+            @Html.TextBoxFor(x => x.date, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            @Html.Label("Comment:", new { @class = "form-label" })
+            @Html.TextAreaFor(x => x.comment, new { @class = "form-control" })
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-success btn-update">Update</button>
+        </div>
+    </form>
+</div>
