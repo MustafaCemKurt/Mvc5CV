@@ -2360,7 +2360,7 @@
     <Content Include="Views\Experience\AddExperience.cshtml" />
     <Content Include="Views\Experience\GetExperience.cshtml" />
     <Content Include="Views\Skill\Index.cshtml" />
-    <Content Include="Views\Skill\newSkill.cshtml" />
+    <Content Include="Views\Skill\yeniskill.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
