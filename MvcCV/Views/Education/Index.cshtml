@@ -1,0 +1,95 @@
+﻿@using MvcCV.Models.Entity
+@model List<TblEducation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .table th, .table td {
+            vertical-align: middle;
+        }
+
+        .btn {
+            margin-right: 5px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .header h2 {
+                margin: 0;
+            }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="card-title">Educations</h3>
+                                <a href="/Education/AddEdu/" class="btn btn-primary float-right">Add New Education</a>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>School</th>
+                                            <th>Faculty</th>
+                                            <th>Department</th>
+                                            <th>GPA</th>
+                                            <th>Date</th>
+                                            <th>Delete</th>
+                                            <th>Update</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@item.id</td>
+                                                <td>@item.baslik</td>
+                                                <td>@item.altbaslik</td>
+                                                <td>@item.altbaslik2</td>
+                                                <td>@item.GNO</td>
+                                                <td>@item.date</td>
+                                                <td>
+                                                    <a href="/Education/DeleteEdu/@item.id" class="btn btn-danger btn-sm">
+                                                        <i class="fas fa-trash"></i> Delete
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="/Education/EditEdu/@item.id" class="btn btn-success btn-sm">
+                                                        <i class="fas fa-pencil-alt"></i> Update
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+</body>
+</html>
