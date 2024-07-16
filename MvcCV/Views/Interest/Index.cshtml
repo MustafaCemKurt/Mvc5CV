@@ -1,0 +1,29 @@
+﻿@using MvcCV.Models.Entity
+@model List<TblInterests>
+@{
+    ViewBag.Title = "Interest Update Page";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container">
+    <h2>Interest Update Page</h2>
+
+    <form method="post">
+        @foreach (var item in Model)
+        {
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Title</label>
+                        <textarea rows="3" class="form-control" name="comment1">@item.comment1</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Explanation</label>
+                        <textarea rows="3" class="form-control" name="comment2">@item.comment2</textarea>
+                    </div>
+                </div>
+            </div>
+        }
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>
