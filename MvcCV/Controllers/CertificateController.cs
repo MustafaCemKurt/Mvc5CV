@@ -21,6 +21,7 @@ namespace MvcCV.Controllers
         public ActionResult GetCerti(int id)
         {
             var certi = repo.Find(x=>x.id == id);
+            ViewBag.d = id;
             return View(certi);
         }
         [HttpPost]
@@ -49,6 +50,13 @@ namespace MvcCV.Controllers
             repo.TAdd(p);
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteCerti(int id)
+        {
+            var certi=repo.Find(x=>x.id == id);
+            repo.TRemove(certi);
+            return RedirectToAction("Index");   
         }
     }
 }
