@@ -1,0 +1,116 @@
+﻿@using MvcCV.Models.Entity
+@model List<TblSocial>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .progress-bar.bg-warming {
+            background-color: #ffc107;
+        }
+
+        .badge.bg-warming {
+            background-color: #ffc107;
+            color: white;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .btn-info, .btn-danger {
+            font-size: 0.9rem;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h3 class="card-title">Social Media</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                              <button class="btn btn-primary" data-toggle="modal" data-target="#modal1"> Add New Social Media Account</button>
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 10px">#</th>
+                                            <th>Social Media Platform</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+
+                                        
+
+                                        <tr>
+                                            <td>@item.ID</td>
+                                            <td>@item.name1</td>
+
+                                            <td>
+                                                <a class="btn btn-info btn-sm" href="/Social/GetPage/@item.ID">
+                                                    <i class="fas fa-pencil-alt"></i> Update
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-danger btn-sm" href="/Social/Delete/@item.ID">
+                                                    <i class="fas fa-trash"></i> Delete
+                                                </a>
+                                            </td>
+                                        </tr>
+                                        }
+                                        </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+        <div class="modal" id="modal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Social Media Add Window</h2>
+                    </div>
+                    <form method="post" action="/Social/Add">
+                        <div class="modal-body">
+                            <label> Social Media Platform </label>
+                            <input type="text" name="name1" class="form-control" />
+                            <br />
+                            <label> Social Media Link </label>
+                            <input type="text" name="link" class="form-control" />
+                            <br />
+                            <label> Social Media İcon </label>
+                            <input type="text" name="icon" class="form-control" />
+                            <br />
+                            <button class="btn btn-info"> Save </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

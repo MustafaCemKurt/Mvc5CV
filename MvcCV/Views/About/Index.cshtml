@@ -1,8 +1,45 @@
-﻿
+﻿@using MvcCV.Models.Entity
+@model List<TblAbout>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Profile Update Page";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Index</h2>
+<div class="container">
+    <h2>Profile Update Page</h2>
 
+    <form method="post">
+        @foreach (var item in Model)
+        {
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="name" value="@item.name" />
+                    </div>
+                    <div class="form-group">
+                        <label>Surname</label>
+                        <input type="text" class="form-control" name="surname" value="@item.surname" />
+                    </div>
+                    <div class="form-group">
+                        <label>Comment</label>
+                        <textarea rows="3" class="form-control" name="comment">@item.comment</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea rows="3" class="form-control" name="adress">@item.adress</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="text" class="form-control" name="phone" value="@item.phone" />
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="mail" value="@item.mail" />
+                    </div>
+                </div>
+            </div>
+        }
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+</div>

@@ -16,6 +16,12 @@ namespace MvcCV.Controllers
             var degerler = db.TblAbout.ToList();
             return View(degerler);
         }
+
+        public PartialViewResult Social()
+        {
+            var social = db.TblSocial.ToList();
+            return PartialView(social);
+        }
         public PartialViewResult deneyim()
         {
             var deneyimler = db.TblExperience.ToList();

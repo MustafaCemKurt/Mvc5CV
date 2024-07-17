@@ -5,7 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MvcCV.
+using MvcCV.Repositories;
+
 namespace MvcCV.Controllers
 {
     public class AboutController : Controller
@@ -15,20 +16,20 @@ namespace MvcCV.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var inter = repo.List();
-            return View(inter);
+            var inte = repo.List();
+            return View(inte);
         }
         [HttpPost]
         public ActionResult Index(TblAbout p)
         {
-            var t = repo.Find(x => x.id == 1);
+            var t = repo.Find(x => x.ıd == 1);
             t.name = p.name;
             t.surname = p.surname;
             t.adress = p.adress;
             t.phone = p.phone;
             t.mail = p.mail;
             t.photo = p.photo;
-            
+            t.comment = p.comment;
             repo.TUpdate(t);
             return RedirectToAction("Index");
         }
