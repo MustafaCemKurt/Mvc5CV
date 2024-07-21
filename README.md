@@ -5,19 +5,19 @@ The project also utilizes Entity Framework for database management.
 
 
 
---->> Login Page 
+--->> Login Page --
 
 ![Login Page](https://github.com/user-attachments/assets/f630d65b-f763-4fd0-a152-1a7227752768)
 
 
 
---->>  Website About Page
+--->>  Website About Page--
 
 ![Cv About Page](https://github.com/user-attachments/assets/85b29192-dd99-4eb8-9a2b-623b53d11bc3)
 
 
 
---->> Website Experience Page 
+--->> Website Experience Page --
 
 ![Cv Experience Page ](https://github.com/user-attachments/assets/5d2d58e8-913d-4151-9d88-2de4e6c50fc7)
 
