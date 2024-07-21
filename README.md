@@ -56,3 +56,5 @@ The project also utilizes Entity Framework for database management.
 
 ![resim_2024-07-17_142527007](https://github.com/user-attachments/assets/0216f702-15c6-46ff-8d7b-6121eb51c4f8)
 
+
+--->> Thank You <<---
