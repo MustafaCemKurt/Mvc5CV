@@ -7,13 +7,13 @@
       <Diagram DiagramId="d1a654bc06534fdc8c7af1699dd95c77" Name="Diagram1">
         <EntityTypeShape EntityType="DbCvModel.TblAbout" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCvModel.TblAdmin" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbCvModel.TblCertificiates" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbCvModel.TblCertificiates" Width="1.5" PointX="2.625" PointY="3.125" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCvModel.TblCommunication" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbCvModel.TblEducation" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbCvModel.TblEducation" Width="1.5" PointX="5" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCvModel.TblExperience" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbCvModel.TblInterests" Width="1.5" PointX="0.625" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbCvModel.TblSkills" Width="1.5" PointX="7.625" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DbCvModel.TblSocial" Width="1.5" PointX="2.5" PointY="5.75" />
+        <EntityTypeShape EntityType="DbCvModel.TblInterests" Width="1.5" PointX="0.625" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbCvModel.TblSkills" Width="1.5" PointX="6.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbCvModel.TblSocial" Width="1.5" PointX="3.125" PointY="5.25" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
